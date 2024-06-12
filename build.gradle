@@ -16,11 +16,16 @@ kotlin {
                 testTask {
                     enabled = false
                 }
-
                 distribution {
                     directory = file("$projectDir/src/backendMain/resources/web")
                 }
                 binaries.executable()
+                webpackTask {
+                    outputFileName = "chat.js"
+                }
+                runTask {
+                    outputFileName = "chat.js"
+                }
             }
         }
         jvm('backend')
