@@ -1,0 +1,12 @@
+image:
+  file: .gitpod.Dockerfile
+
+tasks:
+- name: "Chat"
+  init: |
+    ./gradlew assemble
+  command: |
+    ./gradlew run
+
+ports:
+- port: 8080
