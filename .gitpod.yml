@@ -1,12 +1,11 @@
-image:
-  file: .gitpod.Dockerfile
+image: gitpod/workspace-java-17
 
-tasks:
-- name: "Chat"
-  init: |
-    ./gradlew assemble
-  command: |
-    ./gradlew run
+# tasks:
+# - name: "Chat"
+#   init: |
+#     ./gradlew assemble
+#   command: |
+#     ./gradlew run
 
 ports:
 - port: 8080
